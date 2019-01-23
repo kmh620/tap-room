@@ -1,0 +1,10 @@
+<h1>Beer Works!</h1>
+
+<h3>List of taps:</h3>
+<h5>{{currentTap}}</h5>
+
+<ul class="beer">
+  <li *ngFor="let beer of beers">
+    <p>{{beer.name}}</p>
+  </li>
+</ul>
