@@ -9,18 +9,23 @@ import { BEERS } from '../mock-beer';
   styleUrls: ['./beer.component.css']
 })
 export class BeerComponent implements OnInit {
-  beer = BEERS;
+  beers = BEERS;
+  selectedBeer: Beer;
 
-  constructor(private beerService: BeerService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getBeers();
+    // this.getBeers();
   }
 
-  getBeers(): void {
-    this.BeerService.getBeers()
-    .subscribe(beers => this.beers = beers);
+
+  onSelect(beer: Beer): void {
+    this.selectedBeer = beer;
   }
+  // getBeers(): void {
+  //   this.BeerService.getBeers()
+  //   .subscribe(beers => this.beers = beers);
+  // }
 
   // add(name: string): void {
   //   name = name.trim();

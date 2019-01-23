@@ -1,10 +1,12 @@
 <h1>Beer Works!</h1>
 
-<h3>List of taps:</h3>
-<h5>{{currentTap}}</h5>
+<h3>Our Beers:</h3>
+ <h5>{{currentTap}}</h5>
 
-<ul class="beer">
-  <li *ngFor="let beer of beers">
-    <p>{{beer.name}}</p>
+<ul class="beers">
+  <li *ngFor="let beer of beers"
+    [class.selected]="beer === selectedBeer"
+    (click)="onSelect(beer)">
+    <span class="badge">{{beer.id}}</span> {{beer.name}}
   </li>
 </ul>
