@@ -19,6 +19,7 @@ masterBeerList: Beer[] = [];
 masterBeerList.push(BEERS);
 
   addBeer(newBeer: Beer) {
+    console.log(newBeer);
     this.masterBeerList.push(newBeer);
   }
 }
