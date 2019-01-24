@@ -1,10 +1,10 @@
 <h3>New Beer</h3>
 
-
+<!--
   <div>
    <label>Enter Beer Id:</label>
    <input #newId>
-  </div>
+  </div> -->
 
   <div>
    <label>Enter Beer Name:</label>
@@ -28,5 +28,5 @@
 
 
   <div>
-    <button (click)="submitForm(newId.value, newName.value, newBrand.value, newStyle.value, newAlcoholContent.value)">Add</button>
+    <button (click)="submitForm(newName.value, newBrand.value, newStyle.value, newAlcoholContent.value); newName.value=''; newBrand.value=''; newStyle.value=''; newAlcoholContent.value='';">Add</button>
   </div>

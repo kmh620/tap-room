@@ -7,5 +7,5 @@
   <h2>{{currentTap}}</h2>
 </div>
 
-<app-beers></app-beers>
+<app-beers [childBeerList]="masterBeerList"></app-beers>
 <app-new-beer (sendBeer)="addBeer($event)"></app-new-beer>

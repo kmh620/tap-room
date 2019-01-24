@@ -3,7 +3,7 @@
  <h5>{{currentTap}}</h5>
 
 <ul class="beers">
-  <li *ngFor="let beer of beers"
+  <li *ngFor="let beer of childBeerList"
     [class.selected]="beer === selectedBeer"
     (click)="onSelect(beer)">
     <span class="badge">{{beer.id}}</span> {{beer.name}}

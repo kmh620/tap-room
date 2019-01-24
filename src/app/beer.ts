@@ -1,7 +1,10 @@
 export class Beer {
-  id: number;
-  name: string;
-  brand: string;
-  style: string;
-  alcoholContent: number;
+
+  constructor(public name: string, public brand: string, public style: string, public alcoholContent: number ){
+    // id: number;
+    // name: string;
+    // brand: string;
+    // style: string;
+    // alcoholContent: number;
+  }
 }

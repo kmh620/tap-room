@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Beer } from '../beer';
 import { BeerService } from '../beer.service';
-import { BEERS } from '../mock-beer';
+// import { BEERS } from '../mock-beer';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-beers',
@@ -9,10 +10,11 @@ import { BEERS } from '../mock-beer';
   styleUrls: ['./beer.component.css']
 })
 export class BeerComponent implements OnInit {
-  beers = BEERS;
+  beers =  this.masterBeerList;
+
 
   @Input() childBeerList: Beer[];
-  // @Output() clickSender = new EventEmitter();
+  @Output() clickSender = new EventEmitter();
 
 
   selectedBeer: Beer;
