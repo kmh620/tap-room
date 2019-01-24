@@ -1,4 +1,3 @@
-<h1>Beer Works!</h1>
 
 <h3>Our Beers:</h3>
  <h5>{{currentTap}}</h5>
@@ -10,3 +9,5 @@
     <span class="badge">{{beer.id}}</span> {{beer.name}}
   </li>
 </ul>
+
+<app-beer-detail [beer]="selectedBeer"></app-beer-detail>

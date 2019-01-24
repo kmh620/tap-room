@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BEERS } from '../mock-beer';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,12 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
+
+masterBeerList: Beer[] = [];
+
+masterBeerList.push(BEERS);
+
+  addBeer(newBeer: Beer) {
+    this.masterBeerList.push(newBeer);
+  }
 }

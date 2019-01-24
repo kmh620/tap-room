@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Beer } from '../beer';
 import { BeerService } from '../beer.service';
 import { BEERS } from '../mock-beer';
@@ -10,6 +10,11 @@ import { BEERS } from '../mock-beer';
 })
 export class BeerComponent implements OnInit {
   beers = BEERS;
+
+  @Input() childBeerList: Beer[];
+  // @Output() clickSender = new EventEmitter();
+
+
   selectedBeer: Beer;
 
   constructor() { }

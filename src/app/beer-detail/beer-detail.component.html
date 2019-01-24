@@ -1,3 +1,29 @@
-<p>
-  beer-detail works!
-</p>
+<div *ngIf="beer">
+
+  <h2>{{beer.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{beer.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="beer.name" placeholder="name">
+    </label>
+  </div>
+
+  <div>
+    <label>brand:
+      <input [(ngModel)]="beer.brand" placeholder="brand">
+    </label>
+  </div>
+
+  <div>
+    <label>style:
+      <input [(ngModel)]="beer.style" placeholder="style">
+    </label>
+  </div>
+
+  <div>
+    <label>abv:
+      <input [(ngModel)]="beer.alcoholContent" placeholder="alcoholContent">
+    </label>
+  </div>
+
+</div>
