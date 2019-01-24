@@ -34,6 +34,5 @@ export class AppComponent {
 
   addBeer(newBeer: Beer) {
     this.masterBeerList.push(newBeer);
-    console.log(this.masterBeerList);
   }
 }
